@@ -45,7 +45,7 @@ async def send_photo(message: types.Message):
     photo = types.InputFile('picture/000001.jpg')
     await bot.send_photo(chat_id=message.chat.id, photo=photo)
     await message.answer('Готово')
-    await message.answer(f'Если статья или картинка не соответсвуют правде, то проверьте корректонсть ввода.\n'
+    await message.answer(f'Если статья или картинка не соответствуют правде, то проверьте корректность ввода.\n'
                          f'Зачастую дело в этом')
     os.remove(path='picture/000001.jpg')
 
@@ -59,7 +59,7 @@ async def send_summary(message: types.Message):
         await message.answer(summary)
         await message.answer('Готово')
     except:
-        await message.answer('Пожалуйста, водите имя корректо')
+        await message.answer('Пожалуйста, водите имя корректно')
 
 
 @dp.message_handler(Text(equals='Информация и фото'))
